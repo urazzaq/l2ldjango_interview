@@ -1,4 +1,5 @@
 {% load static %}
+{% load l2l_dt %}
 {#{% load l2l_extras %}#}
 <!doctype html>
 <html lang="en">
@@ -34,7 +35,7 @@
     <link href="{% static 'l2l/product.css' %}" rel="stylesheet">
     </head>
     <body>
-    
+ 
     <header class="site-header sticky-top py-1">
       <nav class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2" href="#" aria-label="Product">
@@ -57,8 +58,10 @@
           <p class="lead fw-normal">Yes this is a rip-off from one of Bootstrap's example html pages.</p>
           <p class="lead fw-normal">Today's date is: {{ now }}</p>
           <p class="lead fw-normal">Today's ISO date is: {{ iso }}</p>
-          {#<p class="lead fw-normal">Today's date from a date is: {{ now|l2l_dt }}</p>#}
-          {#<p class="lead fw-normal">Today's date from a string is: {{ iso|l2l_dt }}</p>#}
+          <p class="lead fw-normal">Today's date from a date is: {{ now|l2l_dt }}</p>
+          <p class="lead fw-normal">Today's date from a string is: {{ iso|l2l_dt }}</p>
+           {% comment %} <p class="lead fw-normal">Today's date from a string is: {{ 4|l2l_dt }}</p> {% endcomment %}
+          {% comment %} <p class="lead fw-normal">Today's date from a string is: {{ "sdsdsdsds"|l2l_dt }}</p> {% endcomment %}
           <a class="btn btn-outline-secondary" href="#">Coming soon</a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
